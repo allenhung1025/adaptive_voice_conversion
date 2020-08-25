@@ -1,7 +1,7 @@
 . libri.config
 
 if [ $stage -le 0 ]; then
-    python3 make_datasets_libri.py $raw_data_dir/ $data_dir $test_prop $n_utts_attr $train_set $test_set
+    python make_datasets_libri.py $raw_data_dir/ $data_dir $test_prop $n_utts_attr $train_set $test_set
 fi
 
 if [ $stage -le 1 ]; then
