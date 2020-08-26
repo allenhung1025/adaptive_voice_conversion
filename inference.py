@@ -38,7 +38,10 @@ class Inferencer(object):
 
         with open(self.args.attr, 'rb') as f:
             self.attr = pickle.load(f)
-
+        
+        # inference from source and target 
+        self.inference_from_path()
+        
     def load_model(self):
         print(f'Load model from {self.args.model}')
         self.model.load_state_dict(torch.load(f'{self.args.model}'))
